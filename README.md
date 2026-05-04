@@ -1,42 +1,135 @@
-# UmmahPlay
+# 🌙 UmmahPlay
 
-UmmahPlay is a static Islamic learning platform with a calm dashboard and structured study flow. It combines:
+A calm, distraction-free Islamic learning platform that combines Quran reading, curated Islamic lectures, and topic-based exploration in one unified experience.
 
-- YouTube Data API for embeddable Islamic video discovery
-- `alquran.cloud` for surah text, translation, audio, and topic search
-- `localStorage` for playlist, bookmarks, last read, and lightweight response caching
+UmmahPlay is designed to help users **learn, reflect, and grow spiritually** without algorithm-driven distractions or noisy content feeds.
 
-## Pages
+---
 
-- `index.html`: Home dashboard with continue-learning, daily ayah, and reflection lane
-- `quran.html`: Sacred reading space with surah navigation, audio, and bookmarks
-- `categories.html`: Learn hub with topic filters and playlist-style learning paths
-- `library.html`: Personal library with bookmarks, saved videos, history, and collections
-- `search.html`: Unified search for Quran topics and embeddable video content
-- `watch.html`: Focused player page with related videos and save actions
+## ✨ Overview
 
-## Setup
+UmmahPlay brings together essential Islamic learning tools into a single clean interface:
 
-1. Start the built-in local server:
+- 📖 Quran reading with translations and audio
+- 🎥 Curated Islamic lectures from trusted sources
+- 🧠 Topic-based learning (faith, patience, purpose, etc.)
+- 🌙 Daily ayah reflection system
+- ⭐ Personal bookmarks and progress tracking
+- 🔎 Unified search across Quran and lectures
 
-```powershell
-node server.js
-```
+---
 
-2. Open `http://localhost:8080/`
-3. Add a restricted YouTube Data API key using the `API Key` button in the header.
-4. Quran reading works without any key.
+## 🚀 Key Features
 
-Windows shortcut:
+### 📖 Quran Reader
+- Clean, distraction-free reading interface  
+- Arabic text with translations  
+- Audio recitation support  
+- Last-read progress tracking  
 
-- Double-click `start-ummahplay.bat`
+---
 
-VS Code:
+### 🔎 Unified Search
+Search across:
+- Quran verses  
+- Islamic topics  
+- Lectures and explanations  
 
-- The existing `Launch Chrome against localhost` profile now starts the local server automatically.
+Example:
+> Searching “patience” returns related Quran ayahs + lectures + reflections
 
-## Notes
+---
 
-- Videos are embedded from YouTube only. The app does not host copyrighted video files.
-- The YouTube API key is stored only in your current browser profile.
-- Library, bookmarks, history, and collections are stored in localStorage.
+### 🎥 Curated Learning Hub
+- Hand-selected Islamic lectures  
+- Organized by themes and scholars  
+- Structured playlists instead of endless scrolling  
+
+---
+
+### 🧠 Topic-Based Learning
+Explore Islam through structured themes:
+- Patience (Sabr)  
+- Trust in Allah (Tawakkul)  
+- Life Purpose  
+- Anxiety & Peace  
+- Death & Akhirah  
+
+---
+
+### 🌙 Daily Ayah Reflection
+- One selected verse per day  
+- Translation and reflection  
+- Simple, focused daily learning habit  
+
+---
+
+### ⭐ Personal Library
+- Bookmark Quran verses and videos  
+- Track reading progress  
+- Save learning paths and topics  
+
+---
+
+## 🛠️ Tech Stack
+
+- ⚡ Next.js  
+- 🎨 Tailwind CSS  
+- 📖 Quran API (text, translation, audio)  
+- 🎥 YouTube Embed API  
+- 💾 Local Storage (for MVP state persistence)  
+
+---
+
+## 🎯 Design Philosophy
+
+UmmahPlay is built around three core principles:
+
+- 🧘 Calm UI — no clutter, no noise  
+- 📚 Structured learning — content organized by meaning  
+- 🎯 Intentional usage — no addictive algorithms or infinite feeds  
+
+---
+
+## 🧠 Vision
+
+To build a modern Islamic learning platform that feels like:
+
+- A digital space for reflection  
+- A structured learning environment  
+- A calm alternative to content-heavy platforms  
+
+---
+
+## 📸 Screenshots
+<img width="1349" height="635" alt="image" src="https://github.com/user-attachments/assets/5c73dbd4-c2d4-4ba0-b41b-aab0a8bfa376" />
+
+
+---
+
+## 📌 Future Improvements
+
+- 🔐 User authentication system  
+- ☁️ Cloud sync for bookmarks and progress  
+- 🧾 Advanced tafsir integration  
+- 📱 Mobile app version  
+- 🤖 AI-powered Islamic topic assistant  
+
+---
+
+## 👨‍💻 Author
+
+Built with focus on:
+- Clean UI/UX design  
+- Structured knowledge systems  
+- Educational and reflective technology  
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a star ⭐ on GitHub.  
+It helps the project reach more developers and learners.
+
+---
+
