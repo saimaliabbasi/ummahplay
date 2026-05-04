@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UmmahPlay | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="home-page" data-page="home">
+    <div class="site-shell">
+      <header class="shell-topbar">
+        <div class="shell-topbar-inner">
+          <a class="brand" href="index.html">
+            <span class="brand-mark">U</span>
+            <span class="brand-copy">
+              <strong>UmmahPlay</strong>
+              <span>calm knowledge dashboard</span>
+            </span>
+          </a>
+
+          <form class="shell-search" data-global-search>
+            <input type="search" name="q" placeholder="Search Quran, Tafsir, lectures, topics...">
+            <button type="submit" class="shell-action-btn">Search</button>
+          </form>
+
+          <div class="shell-actions">
+            <a class="shell-action-btn" data-saved-count href="library.html">Library 0</a>
+            <button class="shell-action-btn" data-theme-toggle type="button">Light</button>
+            <button class="shell-action-btn" type="button" data-settings-toggle>API Key</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="container settings-wrap">
+        <section class="settings-panel" data-settings-panel hidden>
+          <div class="settings-card">
+            <div>
+              <span class="eyebrow">Setup</span>
+              <h3>Connect YouTube for Learn feeds</h3>
+              <p class="panel-subtitle">Quran reading works without a key. Add your YouTube Data API key for live lecture and recitation lanes.</p>
+            </div>
+            <p class="notice-banner" data-api-state></p>
+            <div class="field">
+              <label for="api-key-home">YouTube Data API key</label>
+              <input id="api-key-home" data-api-key-input type="password" placeholder="Paste your restricted browser key">
+            </div>
+            <div class="inline-actions">
+              <button class="btn" type="button" data-api-key-save>Save key</button>
+              <button class="ghost-btn" type="button" data-api-key-clear>Clear key</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="shell-grid">
+        <aside class="sidebar">
+          <div class="sidebar-card">
+            <h2 class="sidebar-title">Navigation</h2>
+            <nav class="side-nav">
+              <a class="side-link" data-nav-link href="index.html">Home</a>
+              <a class="side-link" data-nav-link href="quran.html">Quran</a>
+              <a class="side-link" data-nav-link href="categories.html">Learn</a>
+              <a class="side-link" data-nav-link href="library.html">Library</a>
+            </nav>
+          </div>
+          <div class="sidebar-card">
+            <h2 class="sidebar-title">Topics</h2>
+            <div class="topic-list">
+              <a class="topic-link" href="search.html?q=Patience">Patience</a>
+              <a class="topic-link" href="search.html?q=Anxiety+and+Peace">Anxiety &amp; Peace</a>
+              <a class="topic-link" href="search.html?q=Tawakkul">Tawakkul</a>
+              <a class="topic-link" href="search.html?q=Life+and+Purpose">Life &amp; Purpose</a>
+              <a class="topic-link" href="search.html?q=Death+and+Akhirah">Death &amp; Akhirah</a>
+              <a class="topic-link" href="search.html?q=Character+Building">Character Building</a>
+            </div>
+          </div>
+        </aside>
+
+        <main class="main-stack">
+          <section class="greeting-card" data-reveal>
+            <p class="section-tag">Dashboard</p>
+            <h1>Assalamu Alaikum, welcome back.</h1>
+            <p>Explore knowledge, reflect, and learn at your own pace.</p>
+          </section>
+
+          <section class="continue-grid">
+            <article class="continue-card" data-reveal>
+              <div class="content-title-row">
+                <h2>Continue Learning</h2>
+                <a class="ghost-btn" href="quran.html">Continue</a>
+              </div>
+              <p id="continue-summary" class="panel-subtitle">Loading your last reading checkpoint...</p>
+              <div class="progress-track">
+                <div class="progress-fill" id="continue-progress"></div>
+              </div>
+              <div class="meta-row">
+                <span id="playlist-metric">0 saved videos</span>
+                <span id="bookmark-metric">0 bookmarks</span>
+              </div>
+            </article>
+            <article class="daily-ayah-card" data-reveal>
+              <div class="content-title-row">
+                <h2>Daily Ayah</h2>
+                <a class="ghost-btn" href="quran.html" id="daily-ayah-link">Read Tafsir</a>
+              </div>
+              <div class="ayah-arabic" id="daily-ayah-arabic">Loading ayah...</div>
+              <p id="daily-ayah-translation" class="panel-subtitle">Fetching today's reflection anchor.</p>
+            </article>
+          </section>
+
+          <section class="content-panel" data-reveal>
+            <div class="content-title-row">
+              <h2>Featured Categories</h2>
+              <a class="ghost-btn" href="categories.html">Open Learn</a>
+            </div>
+            <div class="category-tiles" id="home-categories">
+              <article class="category-tile"><h3>Tafsir</h3><p>Deep verse explanation sessions.</p></article>
+              <article class="category-tile"><h3>Seerah</h3><p>Life of the Prophet in sequence.</p></article>
+              <article class="category-tile"><h3>Quran Recitation</h3><p>Tajweed and recitation lanes.</p></article>
+              <article class="category-tile"><h3>Islamic Psychology</h3><p>Faith-centered healing guidance.</p></article>
+              <article class="category-tile"><h3>Hadith</h3><p>Structured hadith explanation tracks.</p></article>
+              <article class="category-tile"><h3>Duas</h3><p>Daily duas with context and meaning.</p></article>
+            </div>
+          </section>
+
+          <section class="content-panel">
+            <div class="content-title-row">
+              <h2>Recommended for Reflection</h2>
+              <a class="ghost-btn" href="search.html?q=daily+ayah+tafsir">Open all</a>
+            </div>
+            <div class="video-grid" id="home-reflection-videos"></div>
+          </section>
+
+          <section class="content-panel">
+            <div class="content-title-row">
+              <h2>Daily Learning Paths</h2>
+              <a class="ghost-btn" href="categories.html#learning-paths">View paths</a>
+            </div>
+            <div class="category-tiles">
+              <article class="category-tile"><h3>Ramadan Journey</h3><p>Quran + short lecture flow.</p></article>
+              <article class="category-tile"><h3>40 Hadith Explained</h3><p>Stepwise hadith study path.</p></article>
+              <article class="category-tile"><h3>Seerah Foundations</h3><p>Structured early life episodes.</p></article>
+              <article class="category-tile"><h3>Healing Anxiety</h3><p>Ayah, tafsir, and practical reminders.</p></article>
+            </div>
+          </section>
+        </main>
+
+        <aside class="context-panel">
+          <section class="context-card" data-reveal>
+            <h3>Today Focus</h3>
+            <p class="panel-subtitle">Choose one short reflection lane and one Quran checkpoint. Keep the session intentional.</p>
+            <div class="context-list">
+              <a class="context-item" href="search.html?q=short+Islamic+reminders">Short reminders (5-10 min)</a>
+              <a class="context-item" href="search.html?q=daily+tafsir">Daily ayah explanation</a>
+              <a class="context-item" href="quran.html">Continue Quran reading</a>
+            </div>
+          </section>
+          <section class="context-card" data-reveal>
+            <h3>Topic Mode</h3>
+            <p class="panel-subtitle">One search opens Quran verses, lectures, and reflective reminders in a unified result.</p>
+          </section>
+        </aside>
+      </div>
+
+      <nav class="mobile-bottom-nav" aria-label="Primary">
+        <a data-nav-link href="index.html">Home</a>
+        <a data-nav-link href="quran.html">Quran</a>
+        <a data-nav-link href="categories.html">Learn</a>
+        <a data-nav-link href="library.html">Library</a>
+      </nav>
+
+      <footer class="footer">
+        <div class="container footer-card">
+          <span>UmmahPlay is built for intentional learning, not algorithmic distraction.</span>
+          <span>&copy; <span data-current-year></span> UmmahPlay</span>
+        </div>
+      </footer>
+    </div>
+
+    <script defer src="js/config.js"></script>
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/api-youtube.js"></script>
+    <script defer src="js/quran-api.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/app.js"></script>
+    <script defer src="js/home.js"></script>
+  </body>
+</html>

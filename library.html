@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UmmahPlay | Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="library-page" data-page="library">
+    <div class="site-shell">
+      <header class="shell-topbar">
+        <div class="shell-topbar-inner">
+          <a class="brand" href="index.html">
+            <span class="brand-mark">U</span>
+            <span class="brand-copy">
+              <strong>UmmahPlay</strong>
+              <span>calm knowledge dashboard</span>
+            </span>
+          </a>
+
+          <form class="shell-search" data-global-search>
+            <input type="search" name="q" placeholder="Search Quran, topics, lectures, meanings...">
+            <button type="submit" class="shell-action-btn">Search</button>
+          </form>
+
+          <div class="shell-actions">
+            <a class="shell-action-btn" data-saved-count href="library.html">Library 0</a>
+            <button class="shell-action-btn" data-theme-toggle type="button">Light</button>
+            <button class="shell-action-btn" type="button" data-settings-toggle>API Key</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="container settings-wrap">
+        <section class="settings-panel" data-settings-panel hidden>
+          <div class="settings-card">
+            <div>
+              <span class="eyebrow">Setup</span>
+              <h3>Connect YouTube for history and Learn feeds</h3>
+              <p class="panel-subtitle">Quran data stays available without a key. YouTube metadata improves watch history detail.</p>
+            </div>
+            <p class="notice-banner" data-api-state></p>
+            <div class="field">
+              <label for="api-key-library">YouTube Data API key</label>
+              <input id="api-key-library" data-api-key-input type="password" placeholder="Paste your restricted browser key">
+            </div>
+            <div class="inline-actions">
+              <button class="btn" type="button" data-api-key-save>Save key</button>
+              <button class="ghost-btn" type="button" data-api-key-clear>Clear key</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="shell-grid">
+        <aside class="sidebar">
+          <div class="sidebar-card">
+            <h2 class="sidebar-title">Navigation</h2>
+            <nav class="side-nav">
+              <a class="side-link" data-nav-link href="index.html">Home</a>
+              <a class="side-link" data-nav-link href="quran.html">Quran</a>
+              <a class="side-link" data-nav-link href="categories.html">Learn</a>
+              <a class="side-link" data-nav-link href="library.html">Library</a>
+            </nav>
+          </div>
+          <div class="sidebar-card">
+            <h2 class="sidebar-title">Topics</h2>
+            <div class="topic-list">
+              <a class="topic-link" href="search.html?q=Patience">Patience</a>
+              <a class="topic-link" href="search.html?q=Anxiety+and+Peace">Anxiety &amp; Peace</a>
+              <a class="topic-link" href="search.html?q=Tawakkul">Tawakkul</a>
+              <a class="topic-link" href="search.html?q=Life+and+Purpose">Life &amp; Purpose</a>
+              <a class="topic-link" href="search.html?q=Death+and+Akhirah">Death &amp; Akhirah</a>
+              <a class="topic-link" href="search.html?q=Character+Building">Character Building</a>
+            </div>
+          </div>
+        </aside>
+
+        <main class="main-stack">
+          <section class="greeting-card" data-reveal>
+            <p class="section-tag">Library</p>
+            <h1>Your personal Islamic knowledge system.</h1>
+            <p>Track saved ayahs, lectures, watch history, and your reading progress in one private space.</p>
+          </section>
+
+          <section class="content-panel">
+            <div class="content-title-row">
+              <h2>Quran Progress</h2>
+              <a class="ghost-btn" href="quran.html">Continue Reading</a>
+            </div>
+            <div class="category-tiles" id="library-progress"></div>
+          </section>
+
+          <section class="content-panel">
+            <div class="content-title-row">
+              <h2>Bookmarks</h2>
+              <a class="ghost-btn" href="quran.html">Open Quran</a>
+            </div>
+            <div id="library-bookmarks"></div>
+          </section>
+
+          <section class="content-panel">
+            <div class="content-title-row">
+              <h2>Saved Videos</h2>
+              <a class="ghost-btn" href="categories.html">Open Learn</a>
+            </div>
+            <div class="saved-grid" id="library-saved-videos"></div>
+          </section>
+
+          <section class="content-panel">
+            <div class="content-title-row">
+              <h2>Watch History</h2>
+              <button class="ghost-btn" id="clear-history" type="button">Clear history</button>
+            </div>
+            <div class="video-grid" id="library-history"></div>
+          </section>
+
+          <section class="content-panel">
+            <div class="content-title-row">
+              <h2>Custom Collections</h2>
+              <span class="panel-subtitle">Build your own study plans</span>
+            </div>
+            <form class="continue-grid" id="collection-form">
+              <div class="field">
+                <label for="collection-name">Collection Name</label>
+                <input id="collection-name" name="name" type="text" placeholder="Ramadan Plan">
+              </div>
+              <div class="field">
+                <label for="collection-query">Search Query</label>
+                <input id="collection-query" name="query" type="text" placeholder="ramadan tafsir series">
+              </div>
+              <div class="field">
+                <label for="collection-description">Description</label>
+                <input id="collection-description" name="description" type="text" placeholder="Daily 20-minute study track">
+              </div>
+              <div class="field">
+                <label>&nbsp;</label>
+                <button class="btn" type="submit">Add Collection</button>
+              </div>
+            </form>
+            <div class="category-tiles" id="library-collections"></div>
+          </section>
+        </main>
+
+        <aside class="context-panel">
+          <section class="context-card" data-reveal>
+            <h3>Retention Loop</h3>
+            <p class="panel-subtitle">Continue one ayah checkpoint and one lecture series each day to keep momentum stable.</p>
+          </section>
+          <section class="context-card" data-reveal>
+            <h3>Quick Paths</h3>
+            <div class="context-list">
+              <a class="context-item" href="search.html?q=daily+ayah+tafsir">Daily ayah tafsir</a>
+              <a class="context-item" href="search.html?q=40+hadith+explained">40 hadith series</a>
+              <a class="context-item" href="search.html?q=anxiety+islamic+reminder">Healing anxiety</a>
+            </div>
+          </section>
+        </aside>
+      </div>
+
+      <nav class="mobile-bottom-nav" aria-label="Primary">
+        <a data-nav-link href="index.html">Home</a>
+        <a data-nav-link href="quran.html">Quran</a>
+        <a data-nav-link href="categories.html">Learn</a>
+        <a data-nav-link href="library.html">Library</a>
+      </nav>
+
+      <footer class="footer">
+        <div class="container footer-card">
+          <span>Library data is private and stored in your browser profile.</span>
+          <span>&copy; <span data-current-year></span> UmmahPlay</span>
+        </div>
+      </footer>
+    </div>
+
+    <script defer src="js/config.js"></script>
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/api-youtube.js"></script>
+    <script defer src="js/quran-api.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/app.js"></script>
+    <script defer src="js/library.js"></script>
+  </body>
+</html>

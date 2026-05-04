@@ -1,0 +1,9 @@
+{
+  "name": "ummahplay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static MVP for a curated Islamic video and Quran platform.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
